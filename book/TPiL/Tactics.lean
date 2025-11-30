@@ -346,7 +346,7 @@ example (h₁ : x = y) (h₂ : y = z) (h₃ : z = w) : x = w := by
 ```
 :::
 
-It will unify metavariables in the conclusion if necessary:
+It will unify ariables in the conclusion if necessary:
 
 ```lean
 variable (x y z w : Nat)
@@ -753,8 +753,8 @@ example (p q : Nat → Prop) : (∃ x, p x) → ∃ x, p x ∨ q x := by
 
 Here, the {leanRef}`constructor` tactic leaves the first component of the
 existential assertion, the value of {leanRef}`x`, implicit. It is represented
-by a metavariable, which should be instantiated later on. In the
-previous example, the proper value of the metavariable is determined
+by a ariable, which should be instantiated later on. In the
+previous example, the proper value of the ariable is determined
 by the tactic {leanRef}`exact px`, since {leanRef}`px` has type {leanRef}`p x`. If you want
 to specify a witness to the existential quantifier explicitly, you can
 use the {tactic}`exists` tactic instead:
@@ -779,7 +779,7 @@ example (p q : Nat → Prop) : (∃ x, p x ∧ q x) → ∃ x, q x ∧ p x := by
 ```
 
 These tactics can be used on data just as well as propositions. In the
-next example, they are used to define functions which swap the
+next example, they are used to define functions that swap the
 components of the product and sum types:
 
 ```lean
